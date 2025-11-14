@@ -29,7 +29,7 @@ async function getArtworks() {
         }
       }
     })
-    return artworks.map(artwork => ({
+    return artworks.map((artwork: any) => ({
       ...artwork,
       price: artwork.price ? Number(artwork.price) : null
     }))

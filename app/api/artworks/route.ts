@@ -39,7 +39,7 @@ export async function GET(request: Request) {
     })
 
     // Convert BigInt to string for JSON serialization
-    const serializedArtworks = artworks.map(artwork => ({
+    const serializedArtworks = artworks.map((artwork: any) => ({
       ...artwork,
       price: artwork.price ? Number(artwork.price) : null
     }))
